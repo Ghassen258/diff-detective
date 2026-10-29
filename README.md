@@ -7,10 +7,10 @@ Most Git diffs show *what changed*. Diff Detective also follows Python import re
 ## Quick start
 
 ```bash
-# Run inside any Python repository (Python 3.11+)
+# Analyze Python modules from a project root (Python 3.11+)
 python diff_detective.py --root /path/to/python/project --changed core.py
 
-# Compare commits (after your project has at least two commits)
+# Compare a Git reference against HEAD
 python diff_detective.py --root /path/to/python/project --base HEAD~1
 
 # Inspect staged changes
@@ -20,7 +20,7 @@ python diff_detective.py --root /path/to/python/project --staged
 python diff_detective.py --root /path/to/python/project --changed core.py --json
 ```
 
-Copy `diff_detective.py` into another repository or invoke it from a cloned checkout with `--root`.
+Pass `--root` to analyze a different Python project without modifying its source files.
 
 ## Example
 
